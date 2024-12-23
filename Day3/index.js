@@ -1,8 +1,10 @@
 import http from 'http'
 
 const server = http.createServer((req,res)=>{
-    res.end("hi")
+    console.log(req.method)
+    console.log(req.url)
     res.writeHead(200,{"content-type":"text/html"})
+    res.end("hi")
 })
 
 server.listen(5000,()=>{
